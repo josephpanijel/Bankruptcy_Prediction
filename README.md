@@ -7,7 +7,7 @@ This project investigates the predictive capacity of a comprehensive banking dat
 Key features include different variants of Return on Assets (ROA), operating margins, debt-related ratios, growth rates in sales and profits, liquidity and solvency indicators, and coverage ratios. The dataset also has flags for specific financial conditions. Our approach involves extensive data preprocessing, handling outliers, and scaling to ensure the reliability of the model. By considering both financial and non-financial factors, such as industry type and economic indicators, our model seeks to capture the complex interplay of variables influencing bankruptcy risk.
 Ultimately, the developed model aims to provide a tool to assess and mitigate the risks associated with bankruptcy, helping in more informed decision-making.
 
-## Introduction/Motivation							
+## Introduction					
 The primary focus of our project is addressing the challenge of predicting bankruptcy in businesses and legal entities. Bankruptcy, a legal process triggered by an entity's inability to meet its financial obligations, allows for debt repayment through the liquidation of assets. The early detection allows for the benefit of creditors, investors, and overall financial stability.
 First, it enables stakeholders to take corrective measures and allocate capital efficiently. This predictive capability is integral to risk assessment, financial planning, and investment decision-making. Robust models not only assist creditors in mitigating risks but also empower investors to make well-informed decisions. Furthermore, these models contribute to a deeper understanding of a company's financial health, facilitating timely interventions when needed.
 Our project seeks to leverage insights from prior research in financial forecasting and machine learning to develop accurate and reliable models for bankruptcy prediction. By doing so, we aim to provide valuable tools that enhance risk management, financial planning, and decision-making processes in the dynamic landscape of business and finance.
@@ -32,8 +32,7 @@ Finding the best AUC.
 Average of TPR for all thresholds in range 0.5 to 0.3.
 Out of all this we used the simplest one i.e. finding the best set of hyperparameters for the model that would produce a model with the best AUC for LightGBM. The list of hyperparameters we experimented with include: max_depth, num_leaves, pos_weight_scale, n_estimators, min_child_samples, subsample, reg_alpha, and reg_lambda.
 
-## Evaluation: How did you evaluate your work? What experiments did you run? Describe clearly your findings.
-# Evaluation
+## Evaluation
 
 To evaluate the model, we compare different metrics with baseline models. The baseline models are simple models trained on the data without any data processing and feature engineering. This provides us with various metrics, such as accuracy, F1-score, and AUC. As mentioned in the methodology, we train Logistic Regression, LightGBM, and Random Forest classification models, yielding the following results:
 
@@ -62,7 +61,7 @@ Observing and comparing the metrics, we confirm that LightGBM performs best of a
 This helps us understand that although the little improvement in accuracy and low value of F1-score do not seem to be a very huge improvement, the goal was to make the model better at predicting more true positives even at the cost of false positives. This is ensured when we see the confusion matrix of the final fine-tuned LightGBM model.
 
 
-## Conclusion What are the conclusions of your work? Are there any highlights? What are some ideas for future work?
+## Conclusion
 Although the development of machine learning techniques has made it possible to predict company failures more accurately for all the stakeholders concerned, it should be remembered that expertise - particularly human expertise - is obviously required for a more in-depth analysis that takes into account the results of the prediction in the economic context of the situation. Indeed, the geopolitical, financial, social or environmental context, and more generally the future uncertainty inherent in human decisions, could have a certain influence on the interpretation of the results, which should not be overlooked.
 Finally, a possible improvement to this system could be, as suggested by Radovanovic & Haas, 2023, the study of the socio-economic cost in this prediction. Therefore, financial statistics combined with data on the socio-economic context of the environment across different countries from different continents would be promising.
 References
